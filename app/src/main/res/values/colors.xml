@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="orange">#D9753B</color>
+    <color name="white_trans">#25FFFFFF</color>
+    <color name="half_trans">#75474747</color>
+    <color name="trans">#005A5A5A</color>
+    <color name="green">#8ABF92</color>
+    <color name="red">#BF1515</color>
+    <color name="grey">#8A8989</color>
+    <color name="blue">#2196F3</color>
+</resources>
+

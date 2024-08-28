@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FastFeast</string>
+    <string name="app_title">moroccan burger</string>
+    <string name="loading_txt">loading&#8230;</string>
+    <string name="main_title">Fast and\nDelicious Food</string>
+    <string name="pizza">Pizza</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_drop_down_adapter">DropDownAdapter</string>
+</resources>
