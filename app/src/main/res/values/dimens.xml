@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="item_spacing">20dp</dimen>
+    <dimen name="item_spacing">12dp</dimen>
     <dimen name="cart_item_spacing">3dp</dimen>
-
-    <!-- res/values-sw600dp/dimens.xml -->
-    <dimen name="text_size_large">20sp</dimen>
-    <dimen name="text_size_medium">18sp</dimen>
-    <dimen name="text_size_small">16sp</dimen>
 </resources>

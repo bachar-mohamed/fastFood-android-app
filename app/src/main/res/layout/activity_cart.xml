@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="@color/white"
+    android:background="#E1DFDF"
     tools:context=".CartActivity">
 
     <RelativeLayout
@@ -70,7 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/generic_rounded_corner"
-            android:backgroundTint="#F25C05">
+            android:backgroundTint="@color/red">
 
             <ImageView
                 android:id="@+id/bag"
@@ -122,11 +122,11 @@
                 android:textAlignment="center"
                 android:gravity="center"
                 android:text="Order Now"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:background="@drawable/generic_rounded_corner"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:backgroundTint="#1F618F"
+                android:backgroundTint="@color/white"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 />

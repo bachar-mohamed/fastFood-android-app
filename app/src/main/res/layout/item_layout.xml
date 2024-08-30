@@ -7,7 +7,7 @@
     android:layout_width="155dp"
     android:layout_height="195dp"
     android:layout_margin="0dp"
-    app:cardBackgroundColor="@color/white_trans"
+    app:cardBackgroundColor="@color/white"
     >
 
     <RelativeLayout
@@ -34,7 +34,7 @@
             android:layout_below="@+id/pizzaImg"
             android:layout_marginTop="10dp"
             android:text="Pizza margarita"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold" />
 
@@ -46,7 +46,7 @@
             android:layout_marginStart="1dp"
             android:layout_marginTop="3dp"
             android:text="Cheese,Tomato,Basil"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="10sp"
             android:textStyle="italic|bold" />
 
@@ -58,7 +58,7 @@
             android:layout_marginStart="3dp"
             android:layout_marginTop="5dp"
             android:text="5"
-            android:textColor="@color/white"
+            android:textColor="@color/orange"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -69,7 +69,7 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:text="100+"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="11sp"
             android:textStyle="bold" />
 
