@@ -1,10 +1,12 @@
 package com.example.burgertemp;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -28,8 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     private TextView signUpBtn;
     private int userId;
     private String userName;
-    MaterialAlertDialogBuilder builder;
-    AlertDialog dialog;
+    Dialog dialog;
 
 
     @Override
@@ -43,7 +44,6 @@ public class LoginActivity extends AppCompatActivity {
             return insets;
         });
         userId=-1;
-
         userEmail = findViewById(R.id.userEmail);
         password = findViewById(R.id.userPassword);
         login = findViewById(R.id.loginBtn);
@@ -64,11 +64,11 @@ public class LoginActivity extends AppCompatActivity {
                             editor.putInt("USER_ID", userId);
                             editor.putString("userName",userName);
                             editor.apply();
-                            showSuccessDialog(R.layout.login_success_dialog,userId);
+                            showSuccessDialog();
                             return;
                         }
                     }
-                    showFailedDialog(R.layout.login_failed_dialog);
+                    showFailedDialog();
 
                 }
             }
@@ -82,12 +82,13 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    public void showSuccessDialog(int layout,int id){
-        builder = new MaterialAlertDialogBuilder(this);
-        View layoutView = getLayoutInflater().inflate(layout,null);
-        Button btn = layoutView.findViewById(R.id.home);
-        builder.setView(layoutView);
-        dialog= builder.create();
+    public void showSuccessDialog(){
+        dialog= new Dialog(this);
+        dialog.setContentView(R.layout.login_success_dialog);
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.dialog_layout));
+        dialog.setCancelable(false);
+        Button btn = dialog.findViewById(R.id.home);
         dialog.show();
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,12 +99,13 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    public void showFailedDialog(int layout){
-        builder = new MaterialAlertDialogBuilder(this);
-        View layoutView = getLayoutInflater().inflate(layout,null);
-        Button button = layoutView.findViewById(R.id.retry);
-        builder.setView(layoutView);
-        dialog= builder.create();
+    public void showFailedDialog(){
+        dialog= new Dialog(this);
+        dialog.setContentView(R.layout.login_failed_dialog);
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.dialog_layout));
+        dialog.setCancelable(false);
+        Button button = dialog.findViewById(R.id.retry);
         dialog.show();
         button.setOnClickListener(new View.OnClickListener() {
             @Override

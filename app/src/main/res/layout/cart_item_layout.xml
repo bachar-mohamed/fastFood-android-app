@@ -5,16 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="80dp"
     android:layout_marginTop="5dp"
-    app:cardBackgroundColor="#B8B6B6"
+    app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="10dp"
-    app:cardElevation="0dp"
+    app:cardElevation="10dp"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:padding="2dp">
+        android:padding="2dp"
+        >
 
         <ImageView
             android:id="@+id/prodImg"
@@ -34,7 +35,7 @@
             android:layout_height="match_parent"
             android:layout_marginStart="9dp"
             android:orientation="vertical"
-            android:gravity="center_vertical"
+
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/prodPrice"
             app:layout_constraintStart_toEndOf="@+id/prodImg"
@@ -45,7 +46,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="product name here"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -53,7 +54,7 @@
                 android:id="@+id/prodIngredients"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:text="tomato,cheese,bacon" />
         </LinearLayout>
 
@@ -63,9 +64,9 @@
             android:layout_height="match_parent"
             android:layout_marginEnd="4dp"
             android:text="220"
-            android:textColor="@color/white"
+            android:textColor="#C3B647"
             android:gravity="center"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

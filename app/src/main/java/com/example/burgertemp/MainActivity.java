@@ -153,11 +153,11 @@ public class MainActivity extends AppCompatActivity {
             TextView selectorCat = findViewById(catId);
             if(id == catId){
 
-                selectorCat.setTextColor(Color.rgb(0, 0, 0));
-                selectorCat.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(255,255,255)));
+                selectorCat.setTextColor(Color.rgb(255, 255, 255));
+                selectorCat.setBackgroundTintList(ColorStateList.valueOf(Color.rgb(251,202,14)));
             }else{
 
-                selectorCat.setTextColor(Color.rgb(255, 255, 255));
+                selectorCat.setTextColor(Color.rgb(0, 0, 0));
                 selectorCat.setBackgroundTintList(ColorStateList.valueOf(Color.TRANSPARENT));
             }
         });

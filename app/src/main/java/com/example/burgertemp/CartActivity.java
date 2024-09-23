@@ -1,12 +1,16 @@
 package com.example.burgertemp;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.Canvas;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -43,7 +47,7 @@ public class CartActivity extends AppCompatActivity {
     private SharedPreferences sharedPreferences;
     private AlertDialog.Builder builder;
     private ArrayList<String> userAddress;
-    private AlertDialog dialog;
+    private Dialog dialog;
     private boolean hasAddress;
     private int id;
 
@@ -142,12 +146,13 @@ public class CartActivity extends AppCompatActivity {
     };
 
     public void showLogoutDialog(int layout) {
-        builder = new AlertDialog.Builder(this);
-        View layoutView = getLayoutInflater().inflate(layout, null);
-        TextView logout = layoutView.findViewById(R.id.confirm_logout);
-        TextView exit = layoutView.findViewById(R.id.abort);
-        builder.setView(layoutView);
-        dialog = builder.create();
+        dialog= new Dialog(this);
+        dialog.setContentView(R.layout.logout_dialog);
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.dialog_layout));
+        dialog.setCancelable(false);
+        TextView logout = dialog.findViewById(R.id.confirm_logout);
+        TextView exit = dialog.findViewById(R.id.abort);
         dialog.show();
         logout.setOnClickListener(new View.OnClickListener() {
             @Override

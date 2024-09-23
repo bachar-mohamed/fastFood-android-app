@@ -1,9 +1,11 @@
 package com.example.burgertemp;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -27,8 +29,7 @@ public class SignUpActivity extends AppCompatActivity {
     private TextInputEditText confirmPassword;
     private Button submit;
     private TextView login;
-    AlertDialog.Builder builder;
-    AlertDialog dialog;
+    Dialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,13 +52,14 @@ public class SignUpActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (validatePassword() && validateConfirmPassword() && validateEmail()) {
+                if (validateUserName() && validatePassword() && validateConfirmPassword() && validateEmail()) {
                     if (password.getText().toString().compareTo(confirmPassword.getText().toString()) != 0) {
                         password.setError("passwords dont match");
                         confirmPassword.setError("passwords dont match");
                     } else if (db.checkEmail(userEmail.getText().toString())>0) {
                             userEmail.setError("email already used");
                     } else {
+                        userName.setError(null);
                         password.setError(null);
                         confirmPassword.setError(null);
                         userEmail.setError(null);
@@ -101,11 +103,12 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     public void showSuccessDialog(int layout) {
-        builder = new AlertDialog.Builder(this);
-        View layoutView = getLayoutInflater().inflate(layout, null);
-        Button btn = layoutView.findViewById(R.id.login);
-        builder.setView(layoutView);
-        dialog = builder.create();
+        dialog= new Dialog(this);
+        dialog.setContentView(R.layout.signup_success_dialog);
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.getWindow().setBackgroundDrawable(getDrawable(R.drawable.dialog_layout));
+        dialog.setCancelable(false);
+        Button btn = dialog.findViewById(R.id.login);
         dialog.show();
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
