@@ -13,7 +13,7 @@
        android:layout_width="match_parent"
        android:layout_height="90dp"
        android:layout_marginBottom="20dp"
-       android:layout_marginTop="-10dp"
+       android:layout_marginTop="0dp"
        app:cardCornerRadius="15dp"
        android:backgroundTint="#fbca0e"
        app:layout_constraintBottom_toTopOf="@+id/recView"

@@ -32,7 +32,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.prodName.setText(products.get(position).getName());
-        holder.prodPrice.setText("¥"+products.get(position).getPrice());
+        holder.prodPrice.setText("$"+products.get(position).getPrice());
         holder.prodImg.setImageResource(products.get(position).getImg_url());
     }
 

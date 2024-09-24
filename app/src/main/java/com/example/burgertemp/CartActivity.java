@@ -92,7 +92,7 @@ public class CartActivity extends AppCompatActivity {
                 showLogoutDialog(R.layout.logout_dialog);
             }
         });
-        price.setText("¥" + getPrice());
+        price.setText("$" + getPrice());
         ItemTouchHelper helper = new ItemTouchHelper(simpleCallback);
         helper.attachToRecyclerView(recyclerView);
         order.setOnClickListener(new View.OnClickListener() {

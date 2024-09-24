@@ -63,15 +63,15 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/pizzaOrders"
+            android:id="@+id/rating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:text="100+"
+            android:text="100"
+            app:drawableStartCompat="@drawable/baseline_star_24"
             android:textColor="@color/black"
-            android:textSize="11sp"
-            android:textStyle="bold" />
+            android:textSize="15sp"/>
 
     </RelativeLayout>
 

@@ -35,8 +35,8 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
     holder.productName.setText(products.get(position).getName());
     holder.productIngredients.setText(products.get(position).getIngredients());
-    holder.productOrders.setText("+"+products.get(position).getOrders());
-    holder.productPrice.setText("¥"+products.get(position).getPrice());
+    holder.productRating.setText(products.get(position).getRating());
+    holder.productPrice.setText("$"+products.get(position).getPrice());
     holder.productImg.setImageResource(products.get(position).getImg_url());
 
     holder.card.setOnClickListener(new View.OnClickListener() {
@@ -81,7 +81,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
         private TextView productName;
         private TextView productPrice;
         private TextView productIngredients;
-        private TextView productOrders;
+        private TextView productRating;
         private CardView card;
         private ImageView productImg;
 
@@ -92,7 +92,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
             productName = itemView.findViewById(R.id.pizzaName);
             productPrice = itemView.findViewById(R.id.pizzaPrice);
             productIngredients=itemView.findViewById(R.id.pizzaIng);
-            productOrders=itemView.findViewById(R.id.pizzaOrders);
+            productRating=itemView.findViewById(R.id.rating);
             productImg=itemView.findViewById(R.id.pizzaImg);
         }
     }
