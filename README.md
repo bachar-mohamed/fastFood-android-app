@@ -7,13 +7,16 @@ My goal with this project was to practice and apply what I have learned about an
 
 Bellow is an overview of the functionalities offered by the application.
 
-### 1. Home Page
-The home page features the categories of products available which are divided into 4 categories:**pizza, Burger, tacos,and salad**.
-Within each category, a selection of food items is displayed,each with some basic information like ingredients, price and rating to help users quickly identify their choices.
+### 1. Browsing and adding items to cart
 
-the user also have the option to search for a specific item, with the search limited to the currently selected category.
+The application features four product categories: **Pizza, Burger, Tacos, and Salad**. Within each category, a selection of food items is displayed, each with basic information such as ingredients, price, and rating to help users quickly identify their choices. Users can select any item for more information or to add it to the cart.
+
+Additionally, the application offers a  search functionality to help the user look for a specific item, however,the search is limited to the currently selected category.
+
+![picture 1](https://github.com/user-attachments/assets/151c77f0-e5d5-44b4-9a44-620ec6a0fb60)
 
 
-![Screenshot 2024-10-07 194710](https://github.com/user-attachments/assets/2d35d621-7b30-4f84-924f-b82daa0a3877)
+### 2. User Authentication and Account Setup
+If a user is using the app for the first time, adding an item to the cart or navigating to the cart will redirect them to the login page, where they can enter their credentials. New users can create an account by signing up. Both the login and sign-up forms include input validation to prevent empty submissions. Upon form submission, a query checks the database for the user's credentials. If the credentials match an entry, a success message is displayed for login attempts. For sign-ups, an error message appears if the account already exists, preventing duplicate accounts.
 
-### 2. Product Page
+![picture 2](https://github.com/user-attachments/assets/216651fd-bf0b-4bb0-a040-82ed9c1b59e4)
