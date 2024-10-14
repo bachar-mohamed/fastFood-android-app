@@ -24,6 +24,9 @@ If a user is using the app for the first time, adding an item to the cart or nav
 ### 3. Cart Management
 Users can view all items added to the cart, with the total price displayed at the bottom. If a user no longer wants an item, they can swipe it to the left to remove it from the cart. Once satisfied with the current items, they will proceed to provide their delivery information.
 
+![aa1](https://github.com/user-attachments/assets/17a6e452-18ed-42aa-8a08-8f45b7af7829)
+
+
 
 # Tech Stack
 - Java
